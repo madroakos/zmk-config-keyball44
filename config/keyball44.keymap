@@ -2,11 +2,10 @@
 #define MOUSE   1
 #define NUM     2
 #define SYM     3
-#define FUN     4
-#define SCROLL  5
-#define SNIPE   6
-#define GAME    7
-#define GAME_NUM 8
+#define SCROLL  4
+#define SNIPE   5
+#define GAME    6
+#define GAME_NUM 7
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
@@ -72,7 +71,7 @@
 &kp ESCAPE      &kp Q     &kp W         &kp E        &kp R      &kp T                 &kp Y            &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
 &kp LCTRL       &kp A     &kp S         &kp D        &kp F      &kp G                 &kp H            &kp J  &kp K      &kp L    &kp SEMI   &kp SQT
 &kp LEFT_SHIFT  &kp Z     &kp X         &kp C        &kp V      &kp B                 &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-&kp LGUI        &kp LALT  &lt 6 ESCAPE  &lt 1 SPACE  &lt 5 TAB             &kp ENTER  &lt 3 BACKSPACE                                        &game_tog 7 DELETE
+&kp LGUI        &kp LALT  &lt 5 ESCAPE  &lt 1 SPACE  &lt 4 TAB             &kp ENTER  &lt 3 BACKSPACE                                        &game_tog 6 DELETE
             >;
         };
 
@@ -106,22 +105,12 @@
             >;
         };
 
-        function_layer {
-            label = "FUN";
-            bindings = <
-&none   &kp F1  &kp F2   &kp F3   &kp F4   &none              &none  &none  &none  &none  &none  &none
-&none   &kp F5  &kp F6   &kp F7   &kp F8   &none              &none  &none  &none  &none  &none  &none
-&none   &kp F9  &kp F10  &kp F11  &kp F12  &none              &none  &none  &none  &none  &none  &none
-&trans  &trans  &trans   &trans   &trans              &trans  &mo 4                              &trans
-            >;
-        };
-
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
             >;
         };
@@ -142,7 +131,7 @@
 &kp ESCAPE      &kp Q     &kp W       &kp E      &kp R    &kp T                 &kp Y          &kp U      &kp I      &kp O      &kp P      &kp BACKSPACE
 &kp LCTRL       &kp A     &kp S       &kp D      &kp F    &kp G                 &kp H          &mkp LCLK  &kp K      &mkp RCLK  &kp SEMI   &kp SQT
 &kp LEFT_SHIFT  &kp Z     &kp X       &kp C      &kp V    &kp B                 &kp N          &kp M      &kp COMMA  &kp DOT    &kp SLASH  &kp RIGHT_SHIFT
-&mo 0           &kp LALT  &kp ESCAPE  &kp SPACE  &kp TAB             &kp ENTER  &kp BACKSPACE                                              &game_tog 7 DELETE
+&mo 0           &kp LALT  &kp ESCAPE  &kp SPACE  &kp TAB             &kp ENTER  &kp BACKSPACE                                              &game_tog 6 DELETE
             >;
         };
     };
