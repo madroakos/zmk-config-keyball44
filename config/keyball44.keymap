@@ -1,11 +1,9 @@
 #define DEFAULT 0
 #define MOUSE   1
-#define NUM     2
-#define SYM     3
-#define SCROLL  4
-#define SNIPE   5
-#define GAME    6
-#define GAME_NUM 7
+#define SYM     2
+#define SCROLL  3
+#define SNIPE   4
+#define GAME    5
 
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/mouse.h>
