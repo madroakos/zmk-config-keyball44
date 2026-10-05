@@ -72,7 +72,7 @@
 &kp ESCAPE      &kp Q           &kp W             &kp E        &kp R           &kp T                 &kp Y            &kp U           &kp I        &kp O             &kp P              &kp BACKSPACE
 &kp LCTRL       &mt LEFT_ALT A  &mt LEFT_SHIFT S  &mt LCTRL D  &mt LEFT_GUI F  &kp G                 &kp H            &mt LEFT_GUI J  &mt LCTRL K  &mt LEFT_SHIFT L  &mt LEFT_ALT SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z           &kp X             &kp C        &kp V           &kp B                 &kp N            &kp M           &kp COMMA    &kp DOT           &kp SLASH          &kp RIGHT_SHIFT
-&kp LEFT_ALT    &kp LEFT_ALT    &kp LEFT_GUI      &lt 3 SPACE  &lt 4 TAB                  &kp ENTER  &lt 1 BACKSPACE                                                                    &game_tog 2 DELETE
+&kp LEFT_GUI    &kp LEFT_ALT    &mo 3             &kp SPACE    &lt 4 TAB                  &kp ENTER  &lt 1 BACKSPACE                                                                    &game_tog 2 DELETE
             >;
         };
 
