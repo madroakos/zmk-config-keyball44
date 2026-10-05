@@ -63,6 +63,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        left_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 5 40>;
+        };
+
+        right_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <11 6 41>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -109,10 +123,10 @@
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans   &trans               &trans  &trans                                  &trans
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans              &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans              &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans              &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans               &trans  &trans                                       &trans
             >;
         };
     };
