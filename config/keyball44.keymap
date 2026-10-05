@@ -67,13 +67,15 @@
         compatible = "zmk,combos";
 
         left_bootloader {
-            bindings = <&sys_reset>;
+            bindings = <&bootloader>;
             key-positions = <0 5 40>;
+            layers = <0>;
         };
 
         right_bootloader {
-            bindings = <&sys_reset>;
+            bindings = <&bootloader>;
             key-positions = <11 6 41>;
+            layers = <0>;
         };
     };
 
