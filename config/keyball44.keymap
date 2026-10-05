@@ -1,7 +1,7 @@
 #define DEFAULT 0
 #define SYM     1
-#define GAME    2
-#define MOUSE   3
+#define MOUSE   2
+#define GAME    3
 #define SCROLL  4
 
 #include <behaviors/mouse_keys.dtsi>
@@ -63,6 +63,22 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        left_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 12 24>;
+            layers = <0>;
+        };
+
+        right_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <11 23 35>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -102,7 +118,7 @@
 &kp ESCAPE      &kp Q     &kp W  &kp E      &kp R    &kp T                 &kp Y          &kp U      &kp I      &kp O      &kp P      &kp BACKSPACE
 &kp LCTRL       &kp A     &kp S  &kp D      &kp F    &kp G                 &kp H          &mkp LCLK  &kp K      &mkp RCLK  &kp SEMI   &kp SQT
 &kp LEFT_SHIFT  &kp Z     &kp X  &kp C      &kp V    &kp B                 &kp N          &kp M      &kp COMMA  &kp DOT    &kp SLASH  &kp RIGHT_SHIFT
-&mo 4           &kp LALT  &mo 2  &kp SPACE  &kp TAB             &kp ENTER  &kp BACKSPACE                                              &game_tog 0 DELETE
+&mo 4           &kp LALT  &mo 2  &kp SPACE  &kp TAB             &kp ENTER  &kp BACKSPACE                                              &game_tog 3 DELETE
             >;
         };
 
